@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free practical AI prompts for work planning, client emails, and content calendars.">
+  <title>Free AI Tools and Prompts | Practical AI Desk</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      color: #263244;
+      background: #f5f7fb;
+    }
+    header, footer {
+      background: #101b32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header a, footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    nav { margin-top: 12px; }
+    .hero {
+      background: #2459c4;
+      color: white;
+      text-align: center;
+      padding: 55px 20px;
+    }
+    .hero h1 { margin-top: 0; }
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 18px;
+    }
+    .tool {
+      background: white;
+      padding: 24px;
+      margin-bottom: 22px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px #0000000d;
+    }
+    .tool h2 { color: #173d85; margin-top: 0; }
+    .prompt {
+      background: #f0f4fb;
+      padding: 16px;
+      border-radius: 8px;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    button {
+      background: #2459c4;
+      color: white;
+      border: 0;
+      padding: 11px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    button:hover { background: #173d85; }
+    .note { color: #536174; font-size: 14px; }
+    a { color: #2459c4; }
+    footer a { color: white; }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Practical AI Desk</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#guides">AI Guides</a>
+      <a href="free-ai-tools.html">Free Tools</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Free AI Tools and Prompts</h1>
+    <p>Practical prompts to help you plan work, write emails, and organize content.</p>
+  </section>
+
+  <main>
+    <p>
+      Copy a prompt below and paste it into your preferred AI assistant.
+      Replace the information in brackets with your own details.
+    </p>
+
+    <section class="tool">
+      <h2>1. Daily Work Planner</h2>
+      <p>Organize your tasks and decide what to do first.</p>
+      <div class="prompt" id="prompt1">Act as a practical productivity assistant. Help me plan my workday.
+
+My tasks: [List your tasks]
+My available time: [Hours available]
+My most important deadline: [Deadline]
+
+Create a realistic schedule with priorities, estimated time for each task, and short breaks. If I have too many tasks, help me choose what to do first.</div>
+      <button onclick="copyPrompt('prompt1', this)">Copy Prompt</button>
+    </section>
+
+    <section class="tool">
+      <h2>2. Client Email Writer</h2>
+      <p>Draft a clear and professional email for a client.</p>
+      <div class="prompt" id="prompt2">Act as a professional business communication assistant.
+
+Purpose of the email: [Purpose]
+Recipient: [Client or colleague]
+Important details: [Add details]
+Tone: Friendly, professional, and clear
+
+Write a concise email with a suitable subject line. Do not invent facts or promises. Use placeholders where information is missing.</div>
+      <button onclick="copyPrompt('prompt2', this)">Copy Prompt</button>
+    </section>
+
+    <section class="tool">
+      <h2>3. Content Calendar Planner</h2>
+      <p>Create a simple content plan for a website or social media page.</p>
+      <div class="prompt" id="prompt3">Act as a content planning assistant.
+
+My topic or niche: [Topic]
+My audience: [Target audience]
+My platform: [Website, LinkedIn, Instagram, etc.]
+How often I can publish: [Posts per week]
+
+Create a 4-week content calendar in a table. Include the date or week, topic, content format, main idea, and a useful call to action. Suggest original, helpful ideas and avoid repeating the same topic.</div>
+      <button onclick="copyPrompt('prompt3', this)">Copy Prompt</button>
+    </section>
+
+    <section class="tool">
+      <h2>4. Article Outline Builder</h2>
+      <p>Turn a topic into a structured outline before writing.</p>
+      <div class="prompt" id="prompt4">Act as an educational article editor.
+
+Article topic: [Topic]
+Target reader: [Reader]
+Main purpose: [Purpose]
+
+Create a clear article outline with an introduction, useful headings, practical examples, and a conclusion. Identify questions the article should answer. Do not invent statistics, sources, or quotations.</div>
+      <button onclick="copyPrompt('prompt4', this)">Copy Prompt</button>
+    </section>
+
+    <p class="note">
+      Tip: Review AI-generated content for accuracy, originality, and suitability before publishing or sending it to a client.
+    </p>
+    <p><a href="index.html">← Back to Home</a></p>
+  </main>
+
+  <footer>
+    <p>Practical AI Desk — Practical knowledge for smarter work.</p>
+    <p>
+      <a href="about.html">About Us</a> |
+      <a href="contact.html">Contact Us</a> |
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </p>
+    <p>© 2026 Practical AI Desk</p>
+  </footer>
+
+  <script>
+    async function copyPrompt(id, button) {
+      const prompt = document.getElementById(id).innerText;
+      try {
+        await navigator.clipboard.writeText(prompt);
+        button.innerText = "Copied!";
+        setTimeout(() => button.innerText = "Copy Prompt", 1500);
+      } catch (error) {
+        window.prompt("Copy this prompt:", prompt);
+      }
+    }
+  </script>
+</body>
+</html>
