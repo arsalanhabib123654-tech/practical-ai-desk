@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://arsalanhabib123654-tech.github.io/practical-ai-desk/sitemap.xml
