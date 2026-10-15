@@ -1,122 +1,357 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Practical AI tools, workflows, and digital guides for freelancers and small businesses.">
+
+  <meta name="description" content="Practical AI guides, prompts, and workflows to help freelancers and small businesses work smarter.">
+
   <title>Practical AI Desk | Work Smarter with AI</title>
+
   <style>
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, sans-serif; color: #182338; background: #f7f9fc; line-height: 1.65; }
-    header { background: #101c36; color: white; padding: 20px; }
-    nav { max-width: 1050px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px; }
-    nav a { color: white; text-decoration: none; margin-right: 12px; font-size: 14px; }
-    .brand { font-size: 21px; font-weight: bold; }
-    .hero { background: #eaf0ff; padding: 65px 20px; text-align: center; }
-    .hero h1 { max-width: 760px; margin: auto; font-size: clamp(32px, 7vw, 50px); line-height: 1.15; }
-    .hero p { max-width: 650px; margin: 20px auto; color: #4a5870; }
-    .button { display: inline-block; background: #245be8; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; }
-    main { max-width: 1050px; margin: auto; padding: 35px 20px; }
-    .section-title { font-size: 27px; }
-    .grid { display: grid; grid-template-coloumns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
-    .card { background: white; padding: 23px; border: 1px solid #e1e7f0; border-radius: 13px; }
-    .card h3 { margin-top: 0; }
-    .card a { color: #245be8; font-weight: bold; }
-    .tag { color: #245be8; font-size: 13px; font-weight: bold; }
-    .about { background: white; padding: 25px; border-radius: 13px; margin-top: 35px; }
-    footer { background: #101c36; color: #dce5f7; padding: 28px 20px; text-align: center; }
-    footer a { color: white; margin: 0 8px; font-size: 14px; }
-    @media(max-width: 500px) { nav { display: block; } nav div:last-child { margin-top: 12px; } .hero { padding: 48px 18px; } }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #182338;
+      background: #f7f9fc;
+      line-height: 1.65;
+    }
+
+    header {
+      background: #101c36;
+      color: white;
+      padding: 20px;
+    }
+
+    nav {
+      max-width: 1050px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 12px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .brand {
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: #eaf0ff;
+      padding: 65px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      margin: auto;
+      font-size: clamp(32px, 7vw, 50px);
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 20px auto;
+      color: #4a5870;
+    }
+
+    .button {
+      display: inline-block;
+      background: #245be8;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #1947bd;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 35px 20px;
+    }
+
+    .section-title {
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .section-intro {
+      color: #536174;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    /* Six guide cards: 3 columns on desktop */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 24px;
+      border: 1px solid #e1e7f0;
+      border-radius: 13px;
+      box-shadow: 0 4px 14px rgba(16, 27, 50, 0.07);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .card h3 {
+      color: #173d85;
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    .card p {
+      color: #536174;
+      margin-top: 0;
+      flex-grow: 1;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 12px;
+      color: #245be8;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    .about {
+      background: white;
+      padding: 25px;
+      border: 1px solid #e1e7f0;
+      border-radius: 13px;
+      margin-top: 35px;
+    }
+
+    .about h2 {
+      margin-top: 0;
+      color: #173d85;
+    }
+
+    footer {
+      background: #101c36;
+      color: #dce5f7;
+      padding: 28px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 8px;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Tablet: 2 columns */
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* Mobile: 1 column */
+
+    @media (max-width: 550px) {
+      nav {
+        display: block;
+      }
+
+      nav div:last-child {
+        margin-top: 12px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 8px 5px 0;
+      }
+
+      .hero {
+        padding: 48px 18px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 21px;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <header>
     <nav>
       <div class="brand">Practical AI Desk</div>
+
       <div>
-        <a href="#home">Home</a>
-        <a href="ai-research-guide.html">Read the AI Research Guide</a>
+        <a href="index.html">Home</a>
+        <a href="#guides">AI Guides</a>
         <a href="free-ai-tools.html">Free Tools</a>
-        <a href="#about">About</a>
+        <a href="about.html">About</a>
       </div>
     </nav>
   </header>
+
   <section class="hero" id="home">
     <h1>Work Smarter with Practical AI</h1>
-    <p>Clear AI guides, useful workflows, and digital resources to help freelancers and small businesses save time and work more effectively.</p>
-    <a class="button" href="#guides">Explore Our Guides</a>
+
+    <p>
+      Clear AI guides, useful workflows, and practical resources
+      to help freelancers and small businesses save time.
+    </p>
+
+    <a class="button" href="#guides">Explore AI Guides</a>
   </section>
+
   <main>
+
     <section id="guides">
-      <h2 class="section-title">Practical AI Guides</h2>
-      <p>Explore useful ideas for applying AI to everyday work.</p>
+      <h2 class="section-title">AI Guides</h2>
+
+      <p class="section-intro">
+        Practical guides for everyday work.
+      </p>
+
       <div class="grid">
-        
-<section id="guides">
-  <h2>Practical AI Guides</h2>
-  <p>Explore practical guides to help you use AI for everyday work.</p>
 
-  <div class="cards">
+        <div class="card">
+          <h3>Plan Your Work with AI</h3>
+          <p>
+            Organize daily tasks, set priorities, and plan your
+            workday with AI.
+          </p>
+          <a href="ai-workday-planning.html">Read the Full Guide</a>
+        </div>
 
-    <div class="card">
-      <h3>Plan Your Work with AI</h3>
-      <p>Learn how to organize daily tasks, set priorities, and plan your workday with AI.</p>
-      <a href="ai-workday-planning.html">Read the full guide</a>
-    </div>
+        <div class="card">
+          <h3>Write Better Client Emails</h3>
+          <p>
+            Draft clear, professional emails and improve
+            communication with clients.
+          </p>
+          <a href="ai-client-emails.html">Read the Full Guide</a>
+        </div>
 
-    <div class="card">
-      <h3>Write Better Client Emails</h3>
-      <p>Use AI to draft clear, professional emails and improve client communication.</p>
-      <a href="ai-client-emails.html">Read the full guide</a>
-    </div>
+        <div class="card">
+          <h3>Build a Content Calendar</h3>
+          <p>
+            Organize content ideas and create a simple
+            publishing schedule with AI.
+          </p>
+          <a href="ai-content-calendar.html">Read the Full Guide</a>
+        </div>
 
-    <div class="card">
-      <h3>Build a Content Calendar</h3>
-      <p>Plan useful content ideas and organize a simple publishing schedule with AI.</p>
-      <a href="ai-content-calendar.html">Read the full guide</a>
-    </div>
+        <div class="card">
+          <h3>Free AI Tools and Prompts</h3>
+          <p>
+            Explore practical prompts for planning, emails,
+            and content creation.
+          </p>
+          <a href="free-ai-tools.html">Explore Free Tools</a>
+        </div>
 
-    <div class="card">
-      <h3>Free AI Tools and Prompts</h3>
-      <p>Explore practical prompts for work planning, emails, and content creation.</p>
-      <a href="free-ai-tools.html">Explore Free Tools</a>
-    </div>
+        <div class="card">
+          <h3>How to Use AI for Research</h3>
+          <p>
+            Research topics, verify facts, and avoid
+            inaccurate AI-generated information.
+          </p>
+          <a href="ai-research-guide.html">Read the Full Guide</a>
+        </div>
 
-    <div class="card">
-      <h3>How to Use AI for Research</h3>
-      <p>Learn to research topics, verify facts, and avoid inaccurate AI information.</p>
-      <a href="ai-research-guide.html">Read the full guide</a>
-    </div>
-
-    <div class="card">
-      <h3>How to Use AI Productively</h3>
-      <p>Discover practical ways to save time, improve workflows, and check AI results.</p>
-      <a href="how-to-use-ai-productively.html">Read the full guide</a>
-    </div>
-
-  </div>
-</section>
+        <div class="card">
+          <h3>How to Use AI Productively</h3>
+          <p>
+            Save time, improve workflows, and use AI
+            more effectively.
+          </p>
+          <a href="how-to-use-ai-productively.html">Read the Full Guide</a>
+        </div>
 
       </div>
-
     </section>
+
     <section id="tools" class="about">
       <h2>Free Tools & Resources</h2>
-      <p>Our next step is to add genuinely useful browser-based tools, practical templates, and downloadable resources. Each resource will be tested before publication.</p>
+
+      <p>
+        Explore practical AI prompts to plan work, write client
+        emails, organize content, and improve everyday tasks.
+      </p>
+
+      <a href="free-ai-tools.html">Explore Free AI Tools</a>
     </section>
+
     <section id="about" class="about">
       <h2>About Practical AI Desk</h2>
-      <p>Practical AI Desk aims to make artificial intelligence easier to use in real work. We focus on clear explanations, responsible use, and practical examples for freelancers and small businesses.</p>
+
+      <p>
+        Practical AI Desk makes artificial intelligence easier
+        to use in real work. We focus on clear explanations,
+        practical examples, and responsible AI use for freelancers
+        and small businesses.
+      </p>
+
+      <a href="about.html">Learn More About Us</a>
     </section>
+
   </main>
-  <footer>  
-<p>Practical AI Desk — Practical knowledge for smarter work.</p>
-<p>
-  <a href="about.html">About Us</a> |
-  <a href="contact.html">Contact Us</a> |
-  <a href="privacy-policy.html">Privacy Policy</a>
-</p>
-<p>© 2026 Practical AI Desk</p>
+
+  <footer>
+    <p>
+      Practical AI Desk — Practical knowledge for smarter work.
+    </p>
+
+    <p>
+      <a href="about.html">About Us</a> |
+      <a href="contact.html">Contact Us</a> |
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </p>
+
+    <p>© 2026 Practical AI Desk</p>
   </footer>
+
 </body>
 </html>
