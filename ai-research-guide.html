@@ -4,112 +4,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn how to use AI for research, verify facts, check sources, and avoid inaccurate information.">
+  <meta name="description" content="Learn how to use AI for research, organize questions, compare sources, and verify information before relying on it.">
   <title>How to Use AI for Research | Practical AI Desk</title>
   <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.8;
-      color: #263244;
-      background: #f5f7fb;
-    }
-    header, footer {
-      background: #101b32;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header a, footer a {
-      color: white;
-      text-decoration: none;
-      margin: 0 8px;
-    }
-    nav { margin-top: 12px; }
-    main {
-      max-width: 850px;
-      margin: 30px auto;
-      padding: 28px;
-      background: white;
-      border-radius: 12px;
-    }
-    h1, h2 { color: #173d85; }
-    header h2, footer p { color: white; }
-    .intro {
-      background: #eaf1ff;
-      padding: 18px;
-      border-radius: 8px;
-    }
-    a { color: #2459c4; }
-    footer a { color: white; }
-    @media (max-width: 600px) {
-      main { margin: 15px; padding: 18px; }
-      nav a { display: inline-block; margin: 5px; }
-    }
+    *{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;line-height:1.7;color:#222;background:#f7f8fa}
+    header,footer{background:#111;color:#fff;padding:20px max(5%,calc((100% - 1000px)/2))}
+    header a,footer a{color:#fff;text-decoration:none;margin-right:14px}header a:hover,footer a:hover{text-decoration:underline}
+    main{max-width:900px;margin:30px auto;padding:28px;background:#fff;border-radius:12px}
+    h1,h2{line-height:1.3}h1{font-size:2.1rem}h2{margin-top:30px}p,li{font-size:1.04rem}
+    .prompt{background:#f1f2f4;padding:16px;border-radius:8px;white-space:pre-wrap}
+    button{background:#b91c1c;color:white;border:0;border-radius:6px;padding:10px 15px;cursor:pointer;font-size:1rem}
+    .note{border-left:4px solid #b91c1c;padding:10px 15px;background:#fff4f4}
+    @media(max-width:600px){main{margin:12px;padding:18px}h1{font-size:1.7rem}header a,footer a{display:inline-block;margin:5px}}
   </style>
 </head>
 <body>
-  <header>
-    <h2>Practical AI Desk</h2>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="index.html#guides"> AI Guides</a>
-      <a href="free-ai-tools.html">Free Tools</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
+<header>
+  <strong>Practical AI Desk</strong>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a><a href="index.html#guides">AI Guides</a>
+    <a href="free-ai-tools.html">Free AI Tools</a><a href="about.html">About</a>
+  </nav>
+</header>
+<main>
+  <p><a href="index.html">Home</a> / AI Guides</p>
+  <h1>How to Use AI for Research</h1>
+  <p>AI can help you organize research questions, summarize information you provide, and identify topics that need further investigation. However, an AI answer is not automatically correct or supported by reliable evidence.</p>
 
-  <main>
-    <h1>How to Use AI to Research a Topic Effectively</h1>
-    <p>AI can help you explore unfamiliar topics, organize information, and prepare a research plan. However, AI-generated answers can contain mistakes, so important facts should always be checked.</p>
+  <h2>1. Start with a Clear Research Question</h2>
+  <p>A focused question usually produces a more useful result than a broad request. Instead of asking “Tell me about online business,” ask “What are three common challenges beginners face when starting a freelance writing service?”</p>
+  <div class="prompt" id="p1">Help me plan research on this question: [write your question]. Break it into smaller questions, identify important terms to define, suggest what types of reliable sources I should look for, and list assumptions I should avoid making. Do not invent facts or citations.</div>
+  <p><button onclick="copyPrompt('p1',this)">Copy Prompt</button></p>
 
-    <div class="intro">
-      <strong>Key idea:</strong> Use AI as a research assistant, not as your only source of truth.
-    </div>
+  <h2>2. Use AI to Organize Your Work</h2>
+  <p>Ask AI to create an outline, group your notes by theme, or explain difficult terms in simpler language. If you need an accurate summary, provide the original text and ask the tool to stay within it.</p>
+  <div class="prompt" id="p2">Organize the research notes below into clear themes. Separate facts, opinions, open questions, and conclusions. Do not add information that is not in my notes. If a point is unclear, label it as unclear. Notes: [paste your notes].</div>
+  <p><button onclick="copyPrompt('p2',this)">Copy Prompt</button></p>
 
-    <h2>1. Start with a Clear Research Question</h2>
-    <p>Before asking AI for information, decide exactly what you want to learn. A specific question usually produces a more useful answer than a broad request.</p>
-    <p>For example, instead of asking “Tell me about AI,” ask “How can a small online business use AI to organize customer support?”</p>
+  <h2>3. Check Sources Independently</h2>
+  <p>When a tool gives you a factual claim, find the original source and read the relevant section yourself. Prefer official documentation, primary research, recognized institutions, and sources that explain their methods. Check the publication date when information may have changed.</p>
+  <ul>
+    <li>Open the original page rather than trusting a quoted snippet.</li>
+    <li>Check whether the source actually supports the claim.</li>
+    <li>Compare important claims with another credible source.</li>
+    <li>Check author, date, evidence, and possible conflicts of interest.</li>
+  </ul>
 
-    <h2>2. Ask AI to Create a Research Plan</h2>
-    <p>Ask AI to divide your topic into smaller questions. This helps you identify important areas to investigate and makes research easier to organize.</p>
-    <p><strong>Example prompt:</strong> “Create a research plan for this topic: [your topic]. List the main questions I should investigate and explain what evidence would help answer each question.”</p>
+  <h2>4. Evaluate a Source</h2>
+  <div class="prompt" id="p3">Help me evaluate this source for my research. Assess its author or organization, publication date, evidence, methods, possible bias, and relevance to my question. Clearly separate what can be established from the information provided and what still needs checking. Research question: [question]. Source details or text: [paste details].</div>
+  <p><button onclick="copyPrompt('p3',this)">Copy Prompt</button></p>
 
-    <h2>3. Check Important Facts</h2>
-    <p>Do not assume that every answer is accurate. Verify important dates, figures, quotations, and technical claims using reliable sources such as official documentation, government websites, academic publications, or the original source.</p>
-    <p>Open the cited source yourself and confirm that it actually supports the claim. A source name or link alone does not prove that a statement is correct.</p>
+  <h2>5. Make a Research Summary</h2>
+  <p>After checking your sources, create a summary that distinguishes confirmed information from uncertainty. Keep a record of the original URLs, titles, authors, and dates so you can return to the evidence later.</p>
+  <div class="prompt" id="p4">Using only the verified notes I provide, write a concise research summary. Include the main findings, evidence for each finding, limitations, and unanswered questions. Do not create references or claim that a source says something unless that is present in my notes. Notes: [paste verified notes and source details].</div>
+  <p><button onclick="copyPrompt('p4',this)">Copy Prompt</button></p>
 
-    <h2>4. Compare More Than One Reliable Source</h2>
-    <p>For important claims, compare information from multiple independent and trustworthy sources. If sources disagree, investigate why instead of choosing the answer that sounds best.</p>
+  <h2>6. Protect Private Information</h2>
+  <p>Do not paste passwords, identity numbers, private customer details, confidential business documents, or sensitive personal information into an AI tool unless you have confirmed that its policies and your permissions allow it.</p>
 
-    <h2>5. Watch for AI Mistakes</h2>
-    <p>AI may invent references, misunderstand a question, use outdated information, or present an uncertain claim confidently. Check that links work, sources exist, and evidence matches the statement.</p>
+  <h2>Common Questions</h2>
+  <h3>Can AI be used as a research source?</h3>
+  <p>AI can help with planning and understanding, but important claims should be supported by original, credible sources.</p>
+  <h3>Can AI make up references?</h3>
+  <p>Yes, AI tools can produce inaccurate or nonexistent references. Always open and verify every cited source.</p>
+  <h3>Which sources should I trust?</h3>
+  <p>Trust depends on the question. Official records and primary sources are often useful, but you should still examine the evidence and context.</p>
 
-    <h2>6. Organize Your Findings</h2>
-    <p>Keep a simple record of the question, the main finding, the source, and any uncertainty. This makes it easier to write an accurate article or report later.</p>
-
-    <h2>7. Write in Your Own Words</h2>
-    <p>Use research to develop your understanding. Create your own explanation, add useful examples, and clearly attribute information when appropriate. Do not copy AI output or another website without reviewing it and adding genuine value.</p>
-
-    <h2>Final Thoughts</h2>
-    <p>AI can make research more organized and efficient when you ask clear questions and verify the answers. The best results come from combining AI assistance with critical thinking and reliable evidence.</p>
-
-    <p><a href="free-ai-tools.html">Explore Free AI Prompts</a></p>
-    <p><a href="ai-workday-planning.html">Read our Workday Planning Guide</a></p>
-    <p><a href="ai-client-emails.html">Read our Client Email Guide</a></p>
-    <p><a href="ai-content-calendar.html">Read our Content Calendar Guide</a></p>
-    <p><a href="index.html">← Back to Home</a></p>
-  </main>
-
-  <footer>
-    <p>Practical AI Desk — Practical knowledge for smarter work.</p>
-    <p>
-      <a href="about.html">About Us</a> |
-      <a href="contact.html">Contact Us</a> |
-      <a href="privacy-policy.html">Privacy Policy</a>
-    </p>
-    <p>© 2026 Practical AI Desk</p>
-  </footer>
+  <div class="note"><strong>Remember:</strong> Treat AI output as a starting point. Your conclusions should be based on evidence you have checked yourself.</div>
+  <h2>Explore More Guides</h2>
+  <ul>
+    <li><a href="how-to-use-ai-productively.html">Use AI Productively</a></li>
+    <li><a href="ai-content-calendar.html">Create a Content Calendar with AI</a></li>
+    <li><a href="ai-client-emails.html">Write Better Client Emails</a></li>
+    <li><a href="free-ai-tools.html">Explore Free AI Tools</a></li>
+  </ul>
+</main>
+<footer>
+  <a href="about.html">About Us</a><a href="contact.html">Contact Us</a><a href="privacy-policy.html">Privacy Policy</a>
+  <p>© 2026 Practical AI Desk. Practical guidance for working smarter with AI.</p>
+</footer>
+<script>
+async function copyPrompt(id,button){
+  const text=document.getElementById(id).innerText;
+  try{await navigator.clipboard.writeText(text);button.textContent="Copied!";setTimeout(()=>button.textContent="Copy Prompt",1800)}
+  catch(e){const area=document.createElement("textarea");area.value=text;document.body.appendChild(area);area.select();const ok=document.execCommand("copy");area.remove();button.textContent=ok?"Copied!":"Please copy manually";setTimeout(()=>button.textContent="Copy Prompt",2200)}
+}
+</script>
 </body>
 </html>
