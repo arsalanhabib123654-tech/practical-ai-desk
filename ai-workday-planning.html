@@ -1,65 +1,270 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Learn a practical step-by-step method for using AI to plan your workday, prioritize tasks, and create a realistic schedule.">
-<title>How to Use AI to Plan Your Workday | Practical AI Desk</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;line-height:1.8;color:#202b3d;background:#f7f9fc}
-header,footer{background:#101c36;color:white;padding:20px}
-nav,.wrap{max-width:850px;margin:auto}
-nav a,footer a{color:white;text-decoration:none}
-nav a{font-weight:bold}
-.wrap{padding:28px 20px}
-article{background:white;border:1px solid #e3e8f0;border-radius:14px;padding:clamp(20px,5vw,44px)}
-h1{font-size:clamp(30px,6vw,43px);line-height:1.2}
-h2{margin-top:32px;font-size:25px}
-.meta{color:#617087;font-size:14px}
-.tip{background:#edf3ff;border-left:4px solid #245be8;padding:16px;border-radius:5px}
-li{margin-bottom:10px}
-a{color:#245be8}
-footer{text-align:center;margin-top:30px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn how to use AI to plan your workday, prioritize tasks, create realistic schedules, and manage your time effectively.">
+  <title>How to Use AI to Plan Your Workday | Practical AI Desk</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.75;
+      color: #182338;
+      background: #f7f9fc;
+    }
+    header, footer {
+      background: #101c36;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header a, footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    main {
+      max-width: 850px;
+      margin: 30px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+    }
+    h1, h2, h3 { line-height: 1.35; }
+    h1 { font-size: 34px; }
+    h2 { margin-top: 32px; color: #173d85; }
+    h3 { margin-top: 24px; }
+    .note {
+      background: #eef3ff;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .prompt {
+      background: #f1f4f8;
+      padding: 18px;
+      border-radius: 8px;
+      overflow-wrap: anywhere;
+    }
+    .prompt button {
+      background: #245be8;
+      color: white;
+      border: 0;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    a { color: #245be8; }
+    header a, footer a { color: white; }
+    @media (max-width: 600px) {
+      main { margin: 12px; padding: 20px; }
+      h1 { font-size: 28px; }
+    }
+  </style>
 </head>
 <body>
-<header><nav><a href="index.html">Practical AI Desk</a></nav></header>
-<main class="wrap">
-<article>
-<p class="meta">AI WORKFLOWS · PRACTICAL GUIDE</p>
-<h1>How to Use AI to Plan Your Workday</h1>
-<p>A busy day can quickly become overwhelming when emails, client requests, meetings, and unfinished tasks compete for your attention. An AI assistant can help you organize these responsibilities into a clearer plan. The important part is to give it useful information and review its suggestions before acting on them.</p>
-<div class="tip"><strong>In this guide:</strong> You will learn a simple process for listing tasks, choosing priorities, creating a realistic schedule, and reviewing your progress.</div>
-<h2>1. Write Down Your Tasks First</h2>
-<p>Before asking AI to organize your day, make a list of the work you actually need to complete. Include deadlines, estimated time, and any tasks that depend on another person. For example, a freelancer might need to reply to a client, finish a design draft, prepare an invoice, and review feedback.</p>
-<p>Keep confidential client information, passwords, private documents, and sensitive business details out of public AI tools unless you have permission and understand the tool's privacy settings.</p>
-<h2>2. Ask AI to Prioritize the List</h2>
-<p>Give the assistant your task list and ask it to separate urgent deadlines from important work that can wait. AI may miss context, so check the proposed order yourself. A deadline agreed with a client should not be ignored simply because an AI assistant ranks another task higher.</p>
-<div class="tip"><strong>Example prompt:</strong><br>Help me organize my workday. Here is my task list: [insert tasks]. My available work time is [hours]. The deadlines are [deadlines]. Group tasks by priority, estimate the time needed, explain your reasoning, and ask me questions if important details are missing. Do not invent deadlines.</div>
-<h2>3. Create a Realistic Schedule</h2>
-<p>Ask AI to arrange the highest-priority tasks into time blocks. Include breaks, meals, meetings, and a little spare time for unexpected requests. Avoid filling every minute: estimates are imperfect, and creative or technical work can take longer than expected.</p>
-<p>For example, you might reserve the first hour for a deadline-sensitive task, the next block for focused project work, and a shorter period later in the day for email and administration. Adjust this structure to your own working hours.</p>
-<h2>4. Turn Large Projects into Small Actions</h2>
-<p>A task such as “launch a website” is too broad to fit neatly into a daily plan. Ask AI to break it into actions such as reviewing the page content, testing mobile navigation, correcting broken links, and checking the contact form. Confirm that each action is relevant to your actual project.</p>
-<h2>5. Review the Plan During the Day</h2>
-<p>At midday, compare your plan with what you have completed. If a new urgent task appears, ask AI to help rearrange the remaining work. Do not keep changing your plan simply to make it look perfect; use it as a practical guide rather than a rigid rule.</p>
-<h2>6. Review What Worked</h2>
-<p>At the end of the day, note which tasks were completed, which took longer than expected, and what needs attention tomorrow. This information can help you make future schedules more realistic. You do not need a complicated productivity system to benefit from a short review.</p>
-<h2>A Simple Daily AI Planning Checklist</h2>
-<ul>
-<li>List the tasks that genuinely need attention.</li>
-<li>Identify real deadlines and dependencies.</li>
-<li>Ask AI for a priority order and a realistic schedule.</li>
-<li>Check the suggestions and correct any mistakes.</li>
-<li>Leave room for breaks and unexpected work.</li>
-<li>Review progress and prepare the next day's priorities.</li>
-</ul>
-<h2>Final Thoughts</h2>
-<p>AI is most useful for daily planning when it helps you think clearly, not when it makes every decision for you. Start with a short task list, review the proposed schedule, and improve the process based on your own experience. The best workflow is one you can realistically maintain.</p>
-<p><a href="index.html">← Back to Practical AI Desk home</a></p>
-</article>
-</main>
-<footer><p>Practical AI Desk</p><p>Practical guides for smarter work.</p><a href="index.html">Home</a></footer>
+  <header>
+    <strong>Practical AI Desk</strong>
+    <p>
+      <a href="index.html">Home</a>
+      <a href="index.html#guides">AI Guides</a>
+      <a href="free-ai-tools.html">Free Tools</a>
+      <a href="about.html">About</a>
+    </p>
+  </header>
+
+  <main>
+    <article>
+      <h1>How to Use AI to Plan Your Workday</h1>
+      <p>
+        A busy workday can feel difficult when you have too many tasks
+        and no clear plan. Artificial intelligence (AI) can help you
+        organize your workload, identify priorities, and build a more
+        realistic schedule. You remain responsible for deciding what
+        matters most.
+      </p>
+
+      <div class="note">
+        <strong>What you will learn:</strong>
+        How to list tasks, set priorities, create a daily schedule,
+        write useful AI prompts, and review your progress.
+      </div>
+
+      <h2>1. Start by Listing Your Tasks</h2>
+      <p>
+        Before asking AI to plan your day, write down the tasks you need
+        to complete. Include deadlines, estimated time, and any task
+        that depends on someone else.
+      </p>
+      <p>For example, a freelance designer might need to:</p>
+      <ul>
+        <li>Finish a client's design draft.</li>
+        <li>Reply to three client emails.</li>
+        <li>Prepare an invoice.</li>
+        <li>Review feedback on an earlier project.</li>
+      </ul>
+      <p>
+        A clear list helps AI make better suggestions than a vague
+        request such as "Plan my day."
+      </p>
+
+      <h2>2. Ask AI to Prioritize Your Work</h2>
+      <p>
+        Not every task is equally important. A task with a deadline
+        today may need attention before a task that can wait until next
+        week. Ask AI to sort tasks by urgency, importance, and estimated
+        effort.
+      </p>
+      <div class="prompt">
+        <strong>Copy-ready prompt</strong>
+        <p id="prompt1">Act as a practical work-planning assistant. Organize my tasks by urgency and importance. Ask me for missing deadlines or time estimates. Explain which three tasks I should prioritize and why. Do not assume that every task can be completed today. My task list: [paste your tasks here].</p>
+        <button onclick="copyPrompt('prompt1', this)">Copy Prompt</button>
+      </div>
+      <p>
+        Review the result yourself. AI may not know which client,
+        deadline, or personal responsibility is most important to you.
+      </p>
+
+      <h2>3. Create a Realistic Daily Schedule</h2>
+      <p>
+        Once you have priorities, ask AI to place tasks into time
+        blocks. Include breaks, meals, meetings, and a little spare
+        time for unexpected work.
+      </p>
+      <div class="prompt">
+        <strong>Copy-ready prompt</strong>
+        <p id="prompt2">Create a realistic work schedule from 9:00 AM to 5:00 PM using my task list: [paste tasks]. Include a lunch break, two short breaks, time estimates, and a 30-minute buffer for unexpected work. Put my most important task during my most productive hours. If everything will not fit, tell me what to postpone.</p>
+        <button onclick="copyPrompt('prompt2', this)">Copy Prompt</button>
+      </div>
+
+      <h2>4. Example of an AI-Assisted Workday</h2>
+      <p>
+        Here is a sample schedule for a freelancer. Adjust the times
+        to match your own working hours and energy levels.
+      </p>
+      <ul>
+        <li><strong>9:00–9:20:</strong> Review tasks and messages.</li>
+        <li><strong>9:20–11:00:</strong> Work on the highest-priority project.</li>
+        <li><strong>11:00–11:15:</strong> Take a short break.</li>
+        <li><strong>11:15–12:15:</strong> Continue project work.</li>
+        <li><strong>12:15–1:00:</strong> Lunch break.</li>
+        <li><strong>1:00–2:00:</strong> Reply to client emails.</li>
+        <li><strong>2:00–3:00:</strong> Complete a smaller task or invoice.</li>
+        <li><strong>3:00–3:15:</strong> Take a short break.</li>
+        <li><strong>3:15–4:30:</strong> Review work and handle feedback.</li>
+        <li><strong>4:30–5:00:</strong> Check progress and plan tomorrow.</li>
+      </ul>
+      <p>
+        This is only an example, not a rule. Move demanding tasks to
+        the hours when you can focus best.
+      </p>
+
+      <h2>5. Use AI When Your Plans Change</h2>
+      <p>
+        Unexpected requests can disrupt a schedule. Instead of trying
+        to fit everything into the same day, update your task list and
+        ask AI to help you revise it.
+      </p>
+      <div class="prompt">
+        <strong>Copy-ready prompt</strong>
+        <p id="prompt3">My original plan has changed because [explain the change]. I have [number] hours left today. My unfinished tasks are [list tasks]. Help me choose what to finish today, what to reschedule, and what needs a message to another person. Keep the plan realistic.</p>
+        <button onclick="copyPrompt('prompt3', this)">Copy Prompt</button>
+      </div>
+
+      <h2>6. Review Your Day in Five Minutes</h2>
+      <p>
+        At the end of the day, compare your plan with what actually
+        happened. This can help you make better estimates in the future.
+      </p>
+      <ul>
+        <li>Which important tasks did I finish?</li>
+        <li>Which tasks took longer than expected?</li>
+        <li>What interrupted my work?</li>
+        <li>What is the first priority for tomorrow?</li>
+      </ul>
+      <p>
+        You can ask AI to summarize your answers and suggest small
+        improvements. Focus on learning from the day, not building a
+        perfect schedule.
+      </p>
+
+      <h2>Common Mistakes to Avoid</h2>
+      <ul>
+        <li><strong>Planning too much:</strong> Leave room for breaks and unexpected work.</li>
+        <li><strong>Giving vague instructions:</strong> Include deadlines and time estimates.</li>
+        <li><strong>Following AI without checking:</strong> Review its suggestions before relying on them.</li>
+        <li><strong>Sharing private information:</strong> Do not paste confidential client details or passwords into AI tools.</li>
+        <li><strong>Changing tools too often:</strong> Start with one tool and a simple routine.</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <h3>Can AI plan my entire workday?</h3>
+      <p>
+        AI can suggest a schedule, but it cannot know every real-world
+        priority or interruption. Review and adjust the plan yourself.
+      </p>
+      <h3>Do I need a paid AI tool?</h3>
+      <p>
+        Not necessarily. Many basic planning tasks can be handled with
+        free AI tools, a calendar, and a simple task list. Features and
+        usage limits vary by service.
+      </p>
+      <h3>What if the AI schedule is unrealistic?</h3>
+      <p>
+        Give it more accurate time estimates, explain your fixed
+        commitments, and ask it to reduce or reschedule lower-priority
+        tasks.
+      </p>
+
+      <h2>Final Thoughts</h2>
+      <p>
+        AI works best as a planning assistant, not as a replacement
+        for your judgment. Start with a clear task list, choose a few
+        priorities, make a realistic schedule, and review the results
+        at the end of the day. Small improvements can make your work
+        more organized over time.
+      </p>
+      <p>
+        Explore more practical resources on the
+        <a href="index.html#guides">AI Guides page</a> or visit
+        <a href="free-ai-tools.html">Free AI Tools and Prompts</a>.
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <p>Practical AI Desk — Practical knowledge for smarter work.</p>
+    <p>
+      <a href="about.html">About Us</a> |
+      <a href="contact.html">Contact Us</a> |
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </p>
+    <p>© 2026 Practical AI Desk</p>
+  </footer>
+
+  <script>
+    async function copyPrompt(id, button) {
+      const text = document.getElementById(id).innerText;
+      try {
+        await navigator.clipboard.writeText(text);
+        button.textContent = "Copied!";
+      } catch (error) {
+        const area = document.createElement("textarea");
+        area.value = text;
+        document.body.appendChild(area);
+        area.select();
+        const success = document.execCommand("copy");
+        area.remove();
+        button.textContent = success ? "Copied!" : "Please copy manually";
+      }
+      setTimeout(() => {
+        button.textContent = "Copy Prompt";
+      }, 2000);
+    }
+  </script>
 </body>
 </html>
